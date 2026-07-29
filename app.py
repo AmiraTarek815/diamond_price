@@ -38,7 +38,7 @@ with col2:
 
 st.divider()
 
-if st.button("Predict Price"):
+if st.button("Price"):
     input_data = pd.DataFrame({
         'carat': [carat],
         'cut': [cut],
