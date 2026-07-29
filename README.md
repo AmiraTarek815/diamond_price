@@ -4,8 +4,6 @@ A machine learning web app that predicts the price of a diamond based on its phy
 
 **🔗 Live app:** [diamondpricegit-qhnlgme3nny5ymtoxthaxi.streamlit.app](https://diamondpricegit-qhnlgme3nny5ymtoxthaxi.streamlit.app/#diamond-price-predictor)
 
-![Diamond Price Predictor](diamond-13258.png)
-
 ##  Overview
 
 This project uses the classic [Diamonds dataset from Kaggle](https://www.kaggle.com/datasets/shivam2503/diamonds) (~54,000 diamonds) to train a regression model that estimates a diamond's price from its carat, cut, color, clarity, and dimensions.
