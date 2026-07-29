@@ -34,6 +34,6 @@ The trained model is wrapped in a full **scikit-learn Pipeline** (preprocessing 
 - joblib
 - Streamlit
 
-## 📁 Dataset
+##  Dataset
 
 [Diamonds Dataset — Kaggle](https://www.kaggle.com/datasets/shivam2503/diamonds)
