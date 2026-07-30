@@ -2,6 +2,16 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+with st.sidebar:
+    st.header("About this app")
+    st.write(
+        "This app predicts diamond prices using a Gradient Boosting "
+        "model trained on the Kaggle Diamonds dataset."
+    )
+    st.write("**Model accuracy (R²):** 0.98")
+    st.markdown("[Dataset on Kaggle](https://www.kaggle.com/datasets/shivam2503/diamonds)")
+    st.markdown("[View source code on GitHub](https://github.com/AmiraTarek815/diamond_price)")
+
 st.set_page_config(page_title="Diamond Price Predictor", page_icon="💎", layout="centered")
 
 model = joblib.load('diamond_price.pkl')
