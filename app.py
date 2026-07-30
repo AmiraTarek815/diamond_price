@@ -1,6 +1,5 @@
 import streamlit as st
 import base64
-from nav import render_sidebar
 
 st.set_page_config(page_title="Diamond Price Predictor", page_icon="💎", layout="wide")
 
@@ -23,7 +22,26 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ---------- Sidebar navigation ----------
-render_sidebar()
+with st.sidebar:
+    st.markdown(
+        "<h2 style='color:white; margin-bottom: 20px;'>💎 Diamond Predictor</h2>",
+        unsafe_allow_html=True
+    )
+
+    if st.button("🏠  Home", use_container_width=True):
+        st.switch_page("app.py")
+
+    if st.button("💰  Predict Price", use_container_width=True):
+        st.switch_page("pages/prediction.py")
+
+    st.markdown(
+        "<a href='#how-it-works' target='_self' style='"
+        "display:block; text-align:center; padding:0.5rem 0; margin-top:0.5rem;"
+        "background-color:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2);"
+        "border-radius:8px; color:#EAEAEA; text-decoration:none; font-size:16px; font-weight:500;'>"
+        "📘  How it works</a>",
+        unsafe_allow_html=True
+    )
 
 # ---------- Hero section ----------
 st.markdown(
@@ -39,14 +57,10 @@ st.markdown(
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-st.markdown(
-    "<p style='text-align: center; color: #D5D5DE; font-size: 16px; max-width: 700px; margin: 0 auto;'>"
-    "Diamonds are valued based on four key factors known as the 4Cs: carat (weight), cut (how well it's "
-    "shaped and faceted), color (how colorless it is), and clarity (how free it is of internal flaws). "
-    "Together with a few physical measurements, these factors determine how much a diamond is worth."
-    "</p>",
-    unsafe_allow_html=True
-)
+col1, col2, col3 = st.columns([1, 1, 1])
+with col2:
+    if st.button("Diamond's Price", use_container_width=True):
+        st.switch_page("pages/prediction.py")
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -115,10 +129,3 @@ with h3:
         "<span style='color:#D5D5DE;'>See the predicted price immediately, no waiting</span>"
         "</div>", unsafe_allow_html=True
     )
-
-st.markdown("<br><br>", unsafe_allow_html=True)
-
-col1, col2, col3 = st.columns([1, 1, 1])
-with col2:
-    if st.button("Diamond's Price", use_container_width=True):
-        st.switch_page("pages/prediction.py")
