@@ -4,6 +4,32 @@ import joblib
 
 st.set_page_config(page_title="Diamond Price Predictor", page_icon="💎", layout="centered")
 
+st.markdown(
+    "<style>[data-testid='stSidebarNav'] {display: none;}</style>",
+    unsafe_allow_html=True
+)
+ 
+with st.sidebar:
+    st.markdown(
+        "<h2 style='color:white; margin-bottom: 20px;'>💎 Diamond Predictor</h2>",
+        unsafe_allow_html=True
+    )
+ 
+    if st.button("🏠  Home", use_container_width=True):
+        st.switch_page("app.py")
+ 
+    if st.button("💰  Predict Price", use_container_width=True):
+        st.switch_page("pages/prediction.py")
+ 
+    st.markdown(
+        "<a href='/#how-it-works' target='_self' style='"
+        "display:block; text-align:center; padding:0.5rem 0; margin-top:0.5rem;"
+        "background-color:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2);"
+        "border-radius:8px; color:#EAEAEA; text-decoration:none; font-size:16px; font-weight:500;'>"
+        "📘  How it works</a>",
+        unsafe_allow_html=True
+    )
+
 model = joblib.load('diamond_price.pkl')
 
 col1, col2, col3 = st.columns([1, 1, 1])
