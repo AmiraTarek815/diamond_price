@@ -24,9 +24,11 @@ st.markdown(f"""
 # ---------- Sidebar navigation ----------
 with st.sidebar:
     st.markdown("## Navigation")
-    st.page_link("app.py", label="Home")
     st.page_link("pages/prediction.py", label="Predict Price")
-    st.page_link("pages/how_it_works.py", label="How it works")
+    st.markdown(
+        "<a href='#how-it-works' style='color:#C9C9D1; text-decoration:none; font-size:16px;'>📘 How it works</a>",
+        unsafe_allow_html=True
+    )
 
 # ---------- Hero section ----------
 st.markdown(
@@ -77,5 +79,40 @@ with c3:
         f"<div style='{card_style}'>"
         "<b style='color:white; font-size:17px;'>Machine learning powered</b><br>"
         "<span style='color:#D5D5DE;'>Built with a Gradient Boosting model</span>"
+        "</div>", unsafe_allow_html=True
+    )
+
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+# ---------- How it works section ----------
+st.markdown(
+    "<h3 id='how-it-works' style='text-align: center; color: white;'>How it works</h3>",
+    unsafe_allow_html=True
+)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+h1, h2, h3 = st.columns(3)
+step_style = "background-color:rgba(255,255,255,0.08); padding:24px; border-radius:16px; text-align:center; border:1px solid rgba(255,255,255,0.15);"
+
+with h1:
+    st.markdown(
+        f"<div style='{step_style}'>"
+        "<b style='color:white; font-size:17px;'>1. Enter details</b><br>"
+        "<span style='color:#D5D5DE;'>Input the diamond's carat, cut, color, clarity and measurements</span>"
+        "</div>", unsafe_allow_html=True
+    )
+with h2:
+    st.markdown(
+        f"<div style='{step_style}'>"
+        "<b style='color:white; font-size:17px;'>2. Model predicts</b><br>"
+        "<span style='color:#D5D5DE;'>A Gradient Boosting model trained on 50,000+ diamonds estimates the price</span>"
+        "</div>", unsafe_allow_html=True
+    )
+with h3:
+    st.markdown(
+        f"<div style='{step_style}'>"
+        "<b style='color:white; font-size:17px;'>3. Get instant result</b><br>"
+        "<span style='color:#D5D5DE;'>See the predicted price immediately, no waiting</span>"
         "</div>", unsafe_allow_html=True
     )
