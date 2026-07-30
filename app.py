@@ -24,12 +24,12 @@ st.markdown(f"""
 # ---------- Sidebar navigation ----------
 with st.sidebar:
     st.markdown("## Navigation")
-    st.page_link("pages/prediction.py", label="Predict Price")
+    if st.button("Predict Price", use_container_width=True):
+        st.switch_page("pages/prediction.py")
     st.markdown(
         "<a href='#how-it-works' style='color:#C9C9D1; text-decoration:none; font-size:16px;'>📘 How it works</a>",
         unsafe_allow_html=True
     )
-
 # ---------- Hero section ----------
 st.markdown(
     "<h1 style='text-align: center; color: white; margin-top: 40px;'>Diamond Price Predictor</h1>",
