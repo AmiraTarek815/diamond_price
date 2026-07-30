@@ -8,7 +8,7 @@ model = joblib.load('diamond_price.pkl')
 
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
-    st.image("diamond-13258.png", width=120)
+    st.image("diamond-13258.png", width=150)
 
 st.markdown(
     "<h2 style='text-align: center;'>Diamond Price Predictor</h2>",
