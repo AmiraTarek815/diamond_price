@@ -2,7 +2,7 @@
 
 A machine learning web app that predicts the price of a diamond based on its physical and quality characteristics, built with **scikit-learn** and deployed with **Streamlit**.
 
-**🔗 Live app:** [diamondpricegit-qhnlgme3nny5ymtoxthaxi.streamlit.app](https://diamondpricegit-qhnlgme3nny5ymtoxthaxi.streamlit.app/#diamond-price-predictor)
+**🔗 Live app:** [diamondpricegit-qhnlgme3nny5ymtoxthaxi.streamlit.app](https://diamondpricegit-qhnlgme3nny5ymtoxthaxi.streamlit.app/)
 
 ##  Overview
 
