@@ -23,13 +23,26 @@ st.markdown(f"""
 
 # ---------- Sidebar navigation ----------
 with st.sidebar:
-    st.markdown("## Navigation")
-    if st.button("Predict Price", use_container_width=True):
-        st.switch_page("pages/prediction.py")
     st.markdown(
-        "<a href='#how-it-works' style='color:#C9C9D1; text-decoration:none; font-size:16px;'>📘 How it works</a>",
+        "<h2 style='color:white; margin-bottom: 20px;'>💎 Diamond Predictor</h2>",
         unsafe_allow_html=True
     )
+
+    if st.button("🏠  Home", use_container_width=True):
+        st.switch_page("app.py")
+
+    if st.button("💰  Predict Price", use_container_width=True):
+        st.switch_page("pages/prediction.py")
+
+    st.markdown(
+        "<a href='#how-it-works' target='_self' style='"
+        "display:block; text-align:center; padding:0.5rem 0; margin-top:0.5rem;"
+        "background-color:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2);"
+        "border-radius:8px; color:#EAEAEA; text-decoration:none; font-size:16px; font-weight:500;'>"
+        "📘  How it works</a>",
+        unsafe_allow_html=True
+    )
+
 # ---------- Hero section ----------
 st.markdown(
     "<h1 style='text-align: center; color: white; margin-top: 40px;'>Diamond Price Predictor</h1>",
